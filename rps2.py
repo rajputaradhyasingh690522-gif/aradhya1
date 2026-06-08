@@ -1,7 +1,3 @@
-# Rock Paper Scissors — OpenCV + MediaPipe 0.10+ (Tasks API)
-# ─────────────────────────────────────────────────────────────
-# Install:  pip install opencv-python mediapipe numpy
-# ─────────────────────────────────────────────────────────────
 
 import cv2
 import numpy as np
@@ -10,9 +6,7 @@ import urllib.request
 import os
 import ssl
 
-# ══════════════════════════════════════════
-#  1. Download model (one-time, ~30 MB)
-# ══════════════════════════════════════════
+
 MODEL_PATH = "hand_landmarker.task"
 MODEL_URL  = (
     "https://storage.googleapis.com/mediapipe-models/"
@@ -21,7 +15,6 @@ MODEL_URL  = (
 
 if not os.path.exists(MODEL_PATH):
     print("Downloading hand_landmarker.task  (first run only)...")
-    # bypass SSL on Mac if certs still misbehave
     ctx = ssl.create_default_context()
     ctx.check_hostname = False
     ctx.verify_mode    = ssl.CERT_NONE
