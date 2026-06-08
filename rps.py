@@ -175,9 +175,7 @@ while True:
     elif key == 27:
         break
 
-# ══════════════════════════════════════════
-#  Cleanup
-# ══════════════════════════════════════════
+
 detector.close()
 cap.release()
 cv2.destroyAllWindows()
